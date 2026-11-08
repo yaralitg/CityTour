@@ -1,0 +1,30 @@
+COMO USAR ESTOS ARCHIVOS EN ANDROID STUDIO
+
+1. File > New > New Project > "Empty Views Activity"
+   Name: CityTour | Package name: com.example.citytour | Language: Java
+
+2. Copia los archivos de esta carpeta en tu proyecto (reemplaza los que existan):
+   app/src/main/java/com/example/citytour/MainActivity.java
+   app/src/main/java/com/example/citytour/ImagenAdapter.java
+   app/src/main/res/layout/activity_main.xml
+   app/src/main/res/layout/item_imagen.xml
+   app/src/main/res/drawable/monumento1.jpg, monumento2.jpg, monumento3.jpg
+   app/src/main/res/raw/explicacion.ogg   (crea la carpeta raw si no existe)
+
+3. En app/build.gradle (Module :app), dentro de dependencies { } agrega:
+   implementation 'androidx.viewpager2:viewpager2:1.0.0'
+   (en build.gradle.kts: implementation("androidx.viewpager2:viewpager2:1.0.0"))
+   y da clic en "Sync Now".
+
+4. Ejecuta con el boton Run.
+
+NOTA: las imagenes y el audio son de ejemplo (un tono). Reemplazalos con
+los tuyos usando EXACTAMENTE los mismos nombres (monumento1.jpg, etc. y
+explicacion.mp3/.ogg). Si usas mp3, no dejes tambien el .ogg (mismo nombre
+= error de recurso duplicado).
+
+----------------------------------------------------------------
+OPCION RAPIDA: ABRIR EL PROYECTO COMPLETO
+Esta carpeta ya es un proyecto completo. En Android Studio:
+File > Open > selecciona la carpeta "CityTour" (la que tiene settings.gradle)
+y espera a que termine el Sync. No hace falta copiar nada.
